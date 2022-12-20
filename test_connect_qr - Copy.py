@@ -39,15 +39,11 @@ while True:
         if (username != '' and password != ''):
             res = loginEticket(username, password)
             if res['id'] != "":
-                print("====================================================")
                 print("Login Successfully!!!!")
-                print("====================================================")
                 userLogin = res
                 # print(userLogin)
             else:
-                print("====================================================")
                 print("Login Failed!!!!")
-                print("====================================================")
 
     else:
         qrcode_scanner_data = ""
@@ -56,8 +52,5 @@ while True:
             print("Chưa có vé quyét")
         else:
             res_soatve = checkEticket(qrcode_scanner_data, userLogin['token'])
-            
-            print("====================================================")
             print(res_soatve['Messages'])
-            print("====================================================")
         
